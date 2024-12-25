@@ -4,7 +4,8 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://admin:HV0JrLgwzGISqUmG@cluster0.f3jed.mongodb.net/userappnew?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("Your mongo db uri")
+
 const User = mongoose.model('Users', {name: String, email: String, password: String})
 
 app.post("/signup", async function(req, res) {
